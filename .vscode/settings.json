@@ -1,0 +1,4 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/home/smozzy/anaconda3/envs/Odin/bin/python"
+}

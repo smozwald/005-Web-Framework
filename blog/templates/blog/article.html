@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> {{ article.article_title }}</title>
+</head>
+
+<body>
+    <div class = "article">
+        <h1>{{ article.article_title}} </h1>
+        <div class = "content">
+            <p>{{ article.article_content }} </p>
+            <p class = 'meta'>Article posted by {{ article.author }} on {{article.post_date }}. </p>
+
+        </div>
+        <div class = "comments">
+            {% for c in article.comment_set.all %}
+                <div class = "comment">
+                    <p> {{ c.comment }} </p>
+                    <p class = 'meta'> {{ c.author }}, {{ c.post_date }}</p>
+                </div>
+            {% endfor %}
+
+        </div>
+        <div class = "comment-form">
+
+            <form>
+                <input type = "text" placeholder ="Enter your Name">
+                <input type = "text" placeholder ="Enter your Comment">
+                <input type = "submit">
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
