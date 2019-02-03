@@ -8,7 +8,7 @@
 <body>
     <h1> Welcome to the Superfun Test Blog!</h1>
     {% for article in articles %}
-        <div class = "article"> <a href = "{% url 'blog:article' article.article_title %}">{{ article.article_title }} </a>  <p> Views: {{article.views }} Comments: {{ article.comment_set.count }} </p></div>
+        <div class = "article"> <a href = "{% url 'blog:article' pk=article.pk %}">{{ article.article_title }} </a>  <p> Views: {{article.views }} Comments: {{ article.comment_set.count }} </p></div>
     {% endfor %}
 </body>
 
