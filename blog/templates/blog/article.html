@@ -8,6 +8,7 @@
 <body>
     <div class = "article">
         <h1>{{ article.article_title}} </h1>
+        <a href = "{% url 'blog:index' %}">Back to Index </a>
         <div class = "content">
             <p>{{ article.article_content }} </p>
             <p class = 'meta'>Article posted by {{ article.author }} on {{article.post_date }}. </p>
