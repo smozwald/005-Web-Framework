@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,6 +27,7 @@ SECRET_KEY = 'bfkocs3_-cul0g=1!qh##^rx=-j6vx8l-f40865#7dr+w#i_x#'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -119,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+django_heroku.settings(locals())
