@@ -1,1 +1,0 @@
-web: gunicorn web_framework_005.wsgi
